@@ -1,3 +1,7 @@
+
+Github
+
+
 Option: 1
 
 rows = 5
@@ -6,4 +10,75 @@ for i in range(rows + 1, 0, -1):
     for j in range(0, i - 1):
         # display star
         print("*", end=' ')
-    print(" ")
+  
+  print(" ")
+
+
+
+
+
+Option: 2
+
+
+def rotate(L, d, n):
+	k = L.index(d)
+	new_lis = []
+	new_lis = L[k+1:]+L[0:k+1]
+	return new_lis
+
+
+if __name__ == '__main__':
+	arr = [1, 2, 3, 4, 5, 6, 7]
+	d = 2
+	N = len(arr)
+
+	# Function call
+	arr = rotate(arr, d, N)
+	for i in arr:
+		
+print(i, end=" ")
+
+
+
+
+
+
+option 3:
+
+
+# Python3 implementation of right rotation 
+# of an array K number of times
+
+# Function to rightRotate array
+def RightRotate(a, n, k):
+
+	# If rotation is greater 
+	# than size of array
+	k = k % n;
+
+	for i in range(0, n):
+
+		if(i < k):
+
+			# Printing rightmost 
+			# kth elements
+			print(a[n + i - k], end = " ");
+
+		else:
+
+			# Prints array after
+			# 'k' elements
+			print(a[i - k], end = " ");
+
+	print("\n");
+
+# Driver code
+Array = [ 1, 2, 3, 4, 5 ];
+N = len(Array);
+K = 2;
+	
+RightRotate(Array, N, K);
+
+
+
+
